@@ -9,6 +9,8 @@ header('Content-Type: application/json');
 
 //ここは自分の環境に合わせて変えないとうまくいかない。ローカルで検証するときはDOMAIN1の方を使うと良いかも（適宜調整）
 // $YOUR_DOMAIN = 'http://localhost:8443/public/success.html';
+
+// XAMPP用
 $YOUR_DOMAIN1 = 'http://localhost/stripe-php-code/public';
 
 
@@ -16,7 +18,7 @@ try {
   //ユーザーの情報を変数に格納する
   $checkout_session = \Stripe\Checkout\Session::retrieve($_POST['session_id']);
   // $return_url = $YOUR_DOMAIN;
-  //ローカル用
+  // XAMPP用
   $return_url = $YOUR_DOMAIN1;
 
   // ユーザーの認証

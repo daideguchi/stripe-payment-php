@@ -13,7 +13,7 @@ composer install
 2. Run the server
 
 ~~~
-php -S 127.0.0.1:4242 --docroot=public
+php -S 127.0.0.1:8443 --docroot=public
 ~~~
 
-3. Go to [http://localhost:4242/public/checkout.html](http://localhost:4242/public/checkout.html)
+3. Go to [http://localhost:8443/public/index.html](http://localhost:8443/public/index.html)

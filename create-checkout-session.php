@@ -8,6 +8,8 @@ header('Content-Type: application/json');
 
 //ここは自分の環境に合わせて変えないとうまくいかない。ローカルで検証するときはDOMAIN1の方を使うと良いかも（適宜調整）
 // $YOUR_DOMAIN = 'http://localhost:8443/public';
+
+// XAMPP用
 $YOUR_DOMAIN1 = 'http://localhost/stripe-php-code/public';
 
 
@@ -39,9 +41,13 @@ try {
 
     // 決済に成功すればここに飛ばす
     // 'success_url' => $YOUR_DOMAIN . '/success.html?session_id={CHECKOUT_SESSION_ID}',
+
+    // XAMPP用
     'success_url' => $YOUR_DOMAIN1 . '/success.html?session_id={CHECKOUT_SESSION_ID}',
-    //  header("Location: public/success.html")
+
     // 決済に失敗すればここに飛ばす
+    // 'cancel_url' => $YOUR_DOMAIN . '/cancel.html',
+    // XAMPP用
     'cancel_url' => $YOUR_DOMAIN1 . '/cancel.html',
   ]);
  //ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
